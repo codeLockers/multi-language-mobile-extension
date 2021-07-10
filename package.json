@@ -1,0 +1,62 @@
+{
+  "name": "multi-language-mobile-extension",
+  "version": "0.0.1",
+  "description": "Tool for generating localization files for iOS and Android",
+  "main": "./src/index.js",
+  "bin": {
+    "multi-language": "./src/index.js"
+  },
+  "author": "Johnny Gu <johnny@wiredcraft.com> (https://github.com/jhonny-me)",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --cache src --fix",
+    "test": "jest",
+    "start": "node src/index.js",
+    "version": "auto-changelog -p && git add CHANGELOG.md"
+  },
+  "homepage": "https://github.com/jhonny-me/multi-language-mobile",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhonny-me/multi-language-mobile.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jhonny-me/multi-language-mobile/issues"
+  },
+  "lint-staged": {
+    "*.{json,css,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "src/**/*.js": [
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "auto-changelog": "^2.0.0",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.0.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^4.2.5",
+    "jest": "^24.9.0",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "commander": "^5.1.0",
+    "csv-parser": "^2.3.3",
+    "googleapis": "39",
+    "ramda": "^0.27.0",
+    "write": "^2.0.0"
+  }
+}
