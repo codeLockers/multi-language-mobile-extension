@@ -1,6 +1,6 @@
 {
   "name": "multi-language-mobile-extension",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "extension multi-language-mobile to support more languages",
   "main": "./src/index.js",
   "bin": {

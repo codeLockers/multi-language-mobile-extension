@@ -13,6 +13,8 @@ const generateFilePath = (key) => {
     case "cn":
     case "chinese":
       return "zh-Hans.lproj/Localizable.strings";
+    case "ja":
+      return "ja.lproj/Localizable.strings";
     default:
       return "base.lproj/Localizable.strings";
   }
